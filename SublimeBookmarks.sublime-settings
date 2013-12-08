@@ -14,5 +14,5 @@
 			project is open */
 	"always_show_project_bookmarks": false,
 
-	
+	"enable_debug_log": false
 }

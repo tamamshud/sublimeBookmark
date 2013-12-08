@@ -29,13 +29,14 @@ g_SETTINGS_NAME = "SublimeBookmarks.sublime-settings"
 #settings
 g_SETTINGS = {
 	"show_free": True,
-	"show_project": False
+	"show_project": False,
+	"enable_debug_log": False
 }
 
 
 def g_log(str):
-	if(True):
-		#dear lord, I'm a monster
+	if(g_SETTINGS["enable_debug_log"]):
+		#my child, your sins are forgiven
 		print ("SublimeBookmarks: " + str)
  
 #Initialization------------------------------------------
@@ -326,6 +327,7 @@ def load_settings():
 	#not a fan of hardcoding this
 	g_SETTINGS["show_free"]  = settings.get("always_show_free_bookmarks", False)
 	g_SETTINGS["show_project"] = settings.get("always_show_project_bookmarks", True)
+	g_SETTINGS["enable_debug_log"] = settings.get("enable_debug_log", False)
 
 
 	#settings.add_on_change('always_show_free_bookmarks', load_settings)
